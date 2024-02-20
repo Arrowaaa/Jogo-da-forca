@@ -181,5 +181,69 @@ namespace WindowsFormsJogoDaForca
         {
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (listViewCadastro.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listViewCadastro.SelectedItems[0];
+                string[] parts = selectedItem.Text.Split('-');
+                int id = int.Parse(parts[0].Trim());
+
+                
+                string palavraEditada = EditarPalavra(id);
+
+                
+                if (!string.IsNullOrEmpty(palavraEditada))
+                {
+                    AtualizarDados(id, palavraEditada);
+                    listViewCadastro.Items.Clear();
+                    CarregarDados();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma palavra para editar.");
+            }
+        }
+        private void AtualizarDados(int id, string novaPalavra)
+        {
+            string conexaoString = "server=62.72.62.1;user=u687609827_alunos;database=u687609827_TI21;port=3306;password=@Aluno12345";
+
+            try
+            {
+                using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+                {
+                    string scriptSQL = "UPDATE tb_palavras SET palavra = @novaPalavra WHERE id = @id";
+
+                    using (MySqlCommand comando = new MySqlCommand(scriptSQL, conexao))
+                    {
+                        conexao.Open();
+
+                        comando.Parameters.AddWithValue("@novaPalavra", novaPalavra.ToLower());
+                        comando.Parameters.AddWithValue("@id", id);
+
+                        int linhasAfetadas = comando.ExecuteNonQuery();
+
+                        if (linhasAfetadas > 0)
+                        {
+                            MessageBox.Show("Palavra atualizada com sucesso.");
+                        }
+                    }
+
+                    conexao.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar informação: " + ex.Message);
+            }
+        }
+
+        private string EditarPalavra(int id)
+        {
+            return null;
+
+        }
     }
 }

@@ -63,9 +63,49 @@ namespace WindowsFormsJogoDaForca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ca {
+            get {
+                object obj = ResourceManager.GetObject("Ca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cap {
+            get {
+                object obj = ResourceManager.GetObject("Cap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura {
+            get {
+                object obj = ResourceManager.GetObject("Captura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2024_02_19_153553 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2024-02-19 153553", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forca {
+            get {
+                object obj = ResourceManager.GetObject("forca", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

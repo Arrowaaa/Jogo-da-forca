@@ -154,5 +154,17 @@
   <ItemGroup>
     <None Include="Resources\Captura de tela 2024-02-19 153553.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forca.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cap.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ca.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

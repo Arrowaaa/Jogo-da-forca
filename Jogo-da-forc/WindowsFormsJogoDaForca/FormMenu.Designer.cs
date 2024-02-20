@@ -36,9 +36,10 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Peru;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrar.Location = new System.Drawing.Point(55, 200);
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadastrar.Location = new System.Drawing.Point(39, 256);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(172, 65);
             this.btnCadastrar.TabIndex = 1;
@@ -48,9 +49,10 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.BackColor = System.Drawing.Color.Lime;
+            this.btnJogar.BackColor = System.Drawing.Color.Green;
             this.btnJogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnJogar.Location = new System.Drawing.Point(252, 200);
+            this.btnJogar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnJogar.Location = new System.Drawing.Point(486, 256);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(169, 65);
             this.btnJogar.TabIndex = 3;
@@ -61,24 +63,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(122, 53);
+            this.label2.BackColor = System.Drawing.Color.Bisque;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label2.Location = new System.Drawing.Point(108, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 31);
+            this.label2.Size = new System.Drawing.Size(255, 37);
             this.label2.TabIndex = 5;
             this.label2.Text = "Golpear o Morir";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.BackColor = System.Drawing.Color.Bisque;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(95, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(423, 31);
+            this.label1.Size = new System.Drawing.Size(453, 33);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bienvenido Al Juego De Fuerza";
             // 
@@ -87,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsJogoDaForca.Properties.Resources.Captura_de_tela_2024_02_19_153553;
-            this.ClientSize = new System.Drawing.Size(483, 296);
+            this.ClientSize = new System.Drawing.Size(667, 333);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnJogar);
