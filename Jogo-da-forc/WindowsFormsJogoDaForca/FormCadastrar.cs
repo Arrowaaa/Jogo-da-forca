@@ -129,58 +129,70 @@ namespace WindowsFormsJogoDaForca
 
         private void RemoverDados(int id)
         {
-
             string conexaoString = "server=62.72.62.1;user=u687609827_alunos;database=u687609827_TI21;port=3306;password=@Aluno12345";
 
             try
             {
                 using (MySqlConnection conexao = new MySqlConnection(conexaoString))
                 {
-
-                    string scriptSQL = "INSERT INTO tb_palavras (palavra) VALUEs (@valorPalavra)";
+                    string scriptSQL = "DELETE FROM tb_palavras WHERE id = @id";
 
                     using (MySqlCommand comando = new MySqlCommand(scriptSQL, conexao))
                     {
-
                         conexao.Open();
 
-                        //comando.Parameters.AddWithValue("@valorPalavra");
+                        comando.Parameters.AddWithValue("@id", id);
 
                         int linhasAfetadas = comando.ExecuteNonQuery();
 
                         if (linhasAfetadas > 0)
                         {
-
-                            MessageBox.Show("Palavra cadastrar com suesso");
-
+                            MessageBox.Show("Palavra removida com sucesso.");
                         }
-
+                        else
+                        {
+                            MessageBox.Show("Não foi possível encontrar a palavra com o ID fornecido.");
+                        }
                     }
 
                     conexao.Close();
-
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar informação: " + ex.Message);
+                MessageBox.Show("Erro ao remover informação: " + ex.Message);
             }
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            // Verifica se foi digitado algum texto no TextBox
+            if (!string.IsNullOrEmpty(txbRemover.Text))
+            {
+                // Obtém o ID digitado pelo usuário no TextBox
+                if (int.TryParse(txbRemover.Text.Trim(), out int id))
+                {
+                    // Chama a função para remover a palavra do banco de dados
+                    RemoverDados(id);
 
-            int selecionado = 0;
+                    // Limpa o TextBox
+                    txbRemover.Text = "";
 
-            RemoverDados(selecionado);
-
+                    // Atualiza a lista de palavras na interface
+                    listViewCadastro.Items.Clear();
+                    CarregarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Digite um ID válido para remover.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o ID da palavra a ser removida.");
+            }
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -190,15 +202,24 @@ namespace WindowsFormsJogoDaForca
                 string[] parts = selectedItem.Text.Split('-');
                 int id = int.Parse(parts[0].Trim());
 
-                
-                string palavraEditada = EditarPalavra(id);
+                // criei uma string para obtém a nova palavra do TextBox
+                string novaPalavra = txbEditar.Text.Trim();
 
-                
-                if (!string.IsNullOrEmpty(palavraEditada))
+                if (!string.IsNullOrEmpty(novaPalavra))
                 {
-                    AtualizarDados(id, palavraEditada);
+                    // Atualiza os dados no banco de dados com a nova palavra
+                    AtualizarDados(id, novaPalavra);
+
+                    // Limpa o TextBox
+                    txbEditar.Text = "";
+
+                    // Atualiza a lista de palavras na interface
                     listViewCadastro.Items.Clear();
                     CarregarDados();
+                }
+                else
+                {
+                    MessageBox.Show("Digite a nova palavra.");
                 }
             }
             else
@@ -240,10 +261,5 @@ namespace WindowsFormsJogoDaForca
             }
         }
 
-        private string EditarPalavra(int id)
-        {
-            return null;
-
-        }
     }
 }

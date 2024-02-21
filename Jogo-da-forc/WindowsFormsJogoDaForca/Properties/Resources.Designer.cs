@@ -93,9 +93,59 @@ namespace WindowsFormsJogoDaForca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2023_02_20_120920 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2023-02-20 120920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2024_02_19_153553 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2024-02-19 153553", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_02_20_210839 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-02-20 210839", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_02_20_212054 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-02-20 212054", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_02_20_212151 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-02-20 212151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_02_20_213459 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-02-20 213459", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
